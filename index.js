@@ -295,8 +295,14 @@ function counterMaker() {
  * counter() // should return 0
  * etc
 */
-function counterMakerWithLimit(/* CODE HERE */) {
-  /* CODE HERE */
+function counterMakerWithLimit(limit) {
+  let count = -1;
+  return function (){
+    if (count === limit){
+      count = -1
+    }
+    return ++count;
+  }
 }
 
 /////////////// END OF CHALLENGE ///////////////
